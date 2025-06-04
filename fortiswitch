@@ -1,0 +1,3 @@
+//check the status of the fortilink
+exe switch-controller diagnose-connection "serial-number"
+exe switch-controller get-conn-status "serial-number"
