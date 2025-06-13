@@ -1,0 +1,40 @@
+1. 
+FortiGate reload > Enter
+
+2.
+[C]: Configure TFTP parameters.
+
+3.
+[I]: Set local IP address. # 設定 fortigate local ip address
+
+4.
+[T]: Set remote TFTP server IP address.
+
+5.
+[F]: Set firmware file name.
+
+6.
+[Q]: Quit this menu.
+
+7.
+[T]: Initiate TFTP firmware transfer.
+
+8.
+Please connect TFTP server to Ethernet port ‘WAN2’. #接到FortiGate的WAN2
+
+9.
+Image Received.
+Checking image… OK
+This firmware image is certified!
+Save as Default firmware/Backup firmware/Run image without saving:[D/B/R]? 
+D # 設定開機的時候預設使用
+
+10.
+Programming the boot device now.The system must re-layout the boot device to install this firmware.
+The default and backup firmware will be lost.
+Continue:[Y/N]? 
+Y # 重開機
+
+11.
+config system admin > edit admin > sset password "myPlainPassword"
+
