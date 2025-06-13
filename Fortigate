@@ -1,8 +1,1 @@
-//ospf mtu size change from 6.X > 7.0
-assign interface and overlook the mtu size 
 
-//7.6.3 not support ssl vpn tunnel mode
-//Use ip sec dial up for the client to site link, and ike2 needs to tpye the command for the user authentication(not 2FA)
-set eap enable 
-set eap-identity send-request
-set authusrgrp "groupname"
