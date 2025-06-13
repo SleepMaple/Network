@@ -1,0 +1,6 @@
+1. change to ipsec dial up mode(client to site)
+
+2. if wanna setup user group for the authentication(EAP), need to type the command in the fortigate
+set eap enable 
+set eap-identity send-request
+set authusrgrp "groupname"
