@@ -1,0 +1,25 @@
+== step 1 ==
+
+show version
+show boot
+
+(install mode and bundle mode)
+.conf > install mode
+.bin > bundle mode
+
+== step 2 ==
+
+if no *.conf:
+  request platform software package clean switch all file flash:
+  install add file flash:"file.bin" activate commit
+  dir flash:
+
+else:
+  config t
+  no boot system
+  boot system flash:
+  end
+  wr
+
+==
+
