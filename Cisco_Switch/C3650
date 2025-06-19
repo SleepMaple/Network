@@ -10,14 +10,14 @@ show boot
 == step 2 ==
 
 if no *.conf:
-  request platform software package clean switch all file flash:
+  request platform software package clean switch all file flash:"file.bin"
   install add file flash:"file.bin" activate commit
   dir flash:
 
 else:
   config t
   no boot system
-  boot system flash:
+  boot system flash:"file.bin"
   end
   wr
 
