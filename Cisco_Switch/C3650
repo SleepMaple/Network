@@ -7,17 +7,26 @@ show boot
 .conf > install mode
 .bin > bundle mode
 
+
 == step 2 ==
 
-if no *.conf:
-  software install file "flash:file_name"
+copy usbflash:"filename" flash:
+copy tftp:"ip/filename" flash:
 
-else:
-  config t
-  no boot system
-  boot system flash:"file.bin"
-  end
-  wr
+verify /md5 flash:"filename"
+
+== step 3 ==
+
+config t
+no boot system
+boot system flash:"file.bin"
+no boot manual
+end
+wr
+
+== step 4 ==
+
+software install file "flash:file_name"
 
 ==
 
