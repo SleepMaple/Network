@@ -17,16 +17,19 @@ verify /md5 flash:"filename"
 
 == step 3 ==
 
-config t
-no boot system
-boot system flash:"file.bin"
-no boot manual
-end
-wr
+software expand file "path" to flash:
+dir | in packages.conf
+more packages.conf > check all *.pkg in the flash:
 
 == step 4 ==
 
-software install file "flash:file_name"
+config t
+no boot manual
+no boot system
+boot system flash:"file.bin"
+end
+wr
+reload
 
 ==
 
