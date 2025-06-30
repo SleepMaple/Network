@@ -1,0 +1,6 @@
+== 確認snmp process並重啟 ==
+
+show process snmpMaster
+restart process snmpMaster
+
+==
